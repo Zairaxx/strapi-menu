@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "categories",
+  "info": {
+    "singularName": "category",
+    "pluralName": "categories",
+    "displayName": "category"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "dishes": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::dish.dish",
+      "inversedBy": "categories"
+    }
+  }
+}
